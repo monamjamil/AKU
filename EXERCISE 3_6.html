@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="EXERCISE 3_6.css">
+
+    <title> Modify the products </title>
+
+</head>
+
+<body>
+
+    <div id="product-modification-section">
+
+        <h3> Modify the Products </h3> 
+
+    </div>
+
+    <div id="filter-section">
+
+        <p>
+
+        <label for="max-price"> Max Price </label>
+
+        <input type="number" id="max-price" step="0.01" onchange="applyFilter()">
+
+        <label for="category-select"> Choose the category </label>
+
+        <select id="category-select" onchange="applyFilter()">
+
+            <option value="">All</option>
+
+            <option value="drink">Drink</option>
+
+            <option value="bakery">Bakery</option>
+
+        </select>
+
+        €   
+        
+        </p>
+
+        <input type = "checkbox" id="discount-checkbox" onclick="applyFilter()">Discount</input>
+
+    </div>
+    
+    <table id="product-table">
+
+        <thead>
+
+            <tr>
+
+                <th> ID </th>
+                 
+                <th> NAME </th>
+
+                <th> PRICE </th>
+
+                <th> CATEGORY </th>
+
+                <th> DISCOUNT </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody> 
+
+        </tbody>
+
+    </table>
+
+    <script src="EXERCISE 3_6.js"></script>
+
+</body>
+
+</html>

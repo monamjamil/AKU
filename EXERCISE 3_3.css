@@ -1,0 +1,32 @@
+.table {
+    width: 100%;
+    margin-top: 5px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: white;
+    border: 2px solid;
+}
+  
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #0f0f0f;
+    color: white;
+}
+  
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+    border: 1px solid;
+}
+  
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+}
+  
+h1 {
+    color: black;
+}

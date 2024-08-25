@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="EXERCISE 3_4.css">
+
+    <title>Product List Display</title>
+
+</head>
+
+<body>
+
+    <div id="product-modification-section">
+
+        <h3>MODIFY</h3>
+
+        <select id="product-selector" onchange="displayProductDetails(this.value)">
+
+            <option value="">CHOOSE</option>
+      
+        </select>
+
+        <div id="product-details" style="display: none;">
+            
+            <p> NAME <input type="text" id="product-name" placeholder="Name"> </p>
+
+            
+
+            <br/>
+
+            <p> PRICE <input type="number" step="0.01" id="product-price" placeholder="Price">  </p>
+
+            
+
+            <br/>
+
+            <button onclick="saveProduct()">Save</button>
+
+        </div>
+         
+    </div>
+
+    <script src="EXERCISE 3_4.js"></script>
+
+</body>
+
+</html>

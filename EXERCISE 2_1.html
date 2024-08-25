@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="Calculator" content="A Simple Calculator With Addition Function">
+
+        <title> Simple Calculator </title>
+
+        <link rel="stylesheet" href="MAIN.css">
+
+        <style>
+
+            input {
+                border-color: greenyellow;
+                color: black;
+                text-justify: auto;
+                border-radius: 20px;
+            }
+            
+            .CAL {
+                height: 30px;
+                border-radius: 15px;
+                background-color: aqua;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1> Simple Calculator </h1>
+
+        <span>
+
+            <input type="number" id="num1"> 
+
+        </span>
+
+        <span>
+
+            <button type="reset" class="add">+</button>
+
+        </span>
+
+        <span>
+
+            <input type="number" id="num2">
+
+        </span>
+
+        <button class="CAL" onclick="calculate()">=</button>
+
+        <input type="text" id="result">
+
+    </body>
+
+    <script> 
+        
+        function calculate() {
+
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            
+            const result = num1 + num2;
+            
+            document.getElementById('result').value = result;
+            
+        }
+    
+    </script>
+
+</html>

@@ -1,0 +1,18 @@
+#product-modification-section, #filter-section {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input[type=number], button {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: yellowgreen;
+    color: white;
+}
+
+
+

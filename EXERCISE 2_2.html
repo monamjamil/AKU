@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Petrol Consumption</title>
+
+    <link href="MAIN.css" rel="stylesheet" type="text/css" />
+
+    <style>
+
+        .input {
+            width: 85px;
+            height: 25px;
+            border-radius: 5px;
+            border-color: red;
+            text-align: center;
+        }
+        
+        .button {
+            color: white;
+            height: 30px;
+            border-radius: 7px;
+            background-color: rgb(48, 163, 48);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Give the Kilometers and The Consumption is Counted Below By Pressing the Button</h1>
+
+    <div>
+
+        <p> KM = <input class="input" id="entry" type="number"> </p>
+
+    </div>
+
+    <div>
+
+        <button class="button" onclick="count()"> COUNT </button>
+
+    </div>
+
+    <p> Consumption is <span id="result"> 0 </span> litres </p>
+
+    <script src="MAIN.js"> 
+
+        function count() {
+
+            const answer = parseFloat(document.getElementById('entry').value);
+        
+            const result = answer / (100 / 7)
+        
+            document.getElementById('result').textContent = result.toFixed(2);
+        
+        }
+
+    </script>
+
+</body>
+
+</html>

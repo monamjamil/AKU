@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CURRENCY</title>
+
+    <link href="MAIN.css" rel="stylesheet" type="text/css" />
+
+    <style>
+
+        .input {
+            height: 25px;
+            width: 60px;
+            border-radius: 4px;
+            font-size: 20px;
+            background-color: rgb(232, 248, 253);
+        }
+                
+        .currency {
+            height: 30px;
+            width: 150px;
+            font-size: 20px;
+            background-color: rgb(232, 248, 253);
+            border-radius: 10px;
+        }        
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Currency Calculator </h1>
+
+    <div>
+
+        <p>
+
+            <input class="input" id="amt1" type="number" oninput="calculate('top')">
+
+            <label for="cur1"> </label>
+
+                <select class="currency" name="currency" id="cur1" onchange="calculate('top')">
+                    
+                    <option value="DOLLAR"> $ (DOLLAR)</option>
+
+                    <option value="EURO" selected> € (EURO)</option>
+
+                    <option value="POUND"> £ (POUND)</option>
+
+                </select>
+
+        </p>
+             
+    </div>
+
+
+    <div>
+
+        <p>
+
+            <input class="input" id="amt2" type="number" oninput="calculate('bottom')">
+
+            <label for="cur2"> </label>
+
+                <select class="currency" name="currency" id="cur2" onchange="calculate('bottom')">
+                    
+                    <option value="DOLLAR" selected> $ (DOLLAR)</option>
+
+                    <option value="EURO"> € (EURO)</option>
+
+                    <option value="POUND"> £ (POUND)</option>
+
+                </select>
+
+        </p>
+
+    </div>
+
+    <script src="MAIN.js">
+        
+        const exchangeRates = {
+
+            EURO: {
+                DOLLAR: 1 / 0.9,
+                POUND: 1 / 1.2
+            },
+        
+            DOLLAR: {
+                EURO: 0.9,
+                POUND: 0.9 / 1.2
+            },
+        
+            POUND: {
+                EURO: 1.2,
+                DOLLAR: 1.2 / 0.9
+            }
+        };
+        
+        function calculate(origin) {
+            const amount1 = parseFloat(document.getElementById('amt1').value);
+        
+            const amount2 = parseFloat(document.getElementById('amt2').value);
+        
+            const currency1 = document.getElementById('cur1').value;
+            
+            const currency2 = document.getElementById('cur2').value;
+        
+            if (origin === 'top') {
+                if (amount1) {
+                    const conversionRate = exchangeRates[currency1][currency2] || 1;
+        
+                    document.getElementById('amt2').value = (amount1 * conversionRate).toFixed(2);
+                }
+        
+            } else {
+                if (amount2) {
+                    const conversionRate = exchangeRates[currency2][currency1] || 1;
+        
+                    document.getElementById('amt1').value = (amount2 * conversionRate).toFixed(2);
+                }
+            }
+        }        
+    
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    margin: 20px;
+    align-items: center;
+}
+
+#product-modification-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+select, input[type=text], input[type=number] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+button {
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%;
+}
